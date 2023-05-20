@@ -1,0 +1,39 @@
+<form action="/stations/${_station.id}/addreading" method="POST">
+  <div class="columns">
+    <div class="field column">
+      <label class="label">Code</label>
+      <div class="control">
+        <input class="input" placeholder="Title" type="text" name="code">
+      </div>
+    </div>
+    <div class="field column">
+      <label class="label">Temperature</label>
+      <div class="control">
+        <input class="input" placeholder="Temperature in °C" type="text" name="temp">
+      </div>
+    </div>
+    <div class="field column">
+      <label class="label">Wind Speed</label>
+      <div class="control">
+        <input class="input" placeholder="Wind Speed in km/h" type="number" name="windSpeed">
+      </div>
+    </div>
+    <div class="field column">
+      <label class="label">Wind Direction</label>
+      <div class="control">
+        <input class="input" placeholder="Wind Direction" type="number" name="windDirection">
+      </div>
+    </div>
+    <div class="field column">
+      <label class="label">Pressure</label>
+      <div class="control">
+        <input class="input" placeholder="Pressure" type="number" name="pressure">
+      </div>
+    </div>
+  </div>
+  <div class="field mt-4">
+    <div class="control">
+      <button class="button is-info">Add Reading</button>
+    </div>
+  </div>
+</form>

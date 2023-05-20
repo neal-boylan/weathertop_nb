@@ -1,0 +1,107 @@
+Reading(r1):
+  dateAndTime: 2023/05/19 08:31:00
+  code: 900
+  temp: 5.0
+  windSpeed: 3.0
+  windDirection: 0
+  pressure: 1000
+Reading(r2):
+  dateAndTime: 2023/05/19 09:31:00
+  code: 400
+  temp: 2.4
+  windSpeed: 1.5
+  windDirection: 0
+  pressure: 1000
+Reading(r3):
+  dateAndTime: 2023/05/19 09:31:00
+  code: 600
+  temp: 1.6
+  windSpeed: 2.1
+  windDirection: 0
+  pressure: 998
+Reading(r4):
+  dateAndTime: 2023/05/19 09:31:00
+  code: 700
+  temp: 6.0
+  windSpeed: 8.0
+  windDirection: 0
+  pressure: 1050
+Reading(r5):
+  dateAndTime: 2023/05/19 09:31:00
+  code: 600
+  temp: 5.4
+  windSpeed: 6.0
+  windDirection: 0
+  pressure: 1040
+Reading(r6):
+  dateAndTime: 2023/05/19 09:31:00
+  code: 100
+  temp: 5.1
+  windSpeed: 9.0
+  windDirection: 0
+  pressure: 1065
+Reading(r7):
+  dateAndTime: 2023/05/19 09:31:00
+  code: 200
+  temp: 12
+  windSpeed: 2
+  windDirection: 0
+  pressure: 1100
+Reading(r8):
+  dateAndTime: 2023/05/19 09:31:00
+  code: 300
+  temp: 12.1
+  windSpeed: 1.6
+  windDirection: 0
+  pressure: 1100
+Reading(r9):
+  dateAndTime: 2023/05/19 09:31:00
+  code: 400
+  temp: 12.4
+  windSpeed: 1.6
+  windDirection: 0
+  pressure: 1100
+
+Station(s1):
+  name: Dublin
+  latitude: 53.43
+  longitude: -6.23
+  readings:
+    - r1
+    - r2
+    - r3
+
+Station(s2):
+  name: Tralee
+  latitude: 52.27
+  longitude: -9.70
+  readings:
+    - r4
+    - r5
+    - r6
+
+Station(s3):
+  name: Galway
+  latitude: 53.27
+  longitude: -9.05
+  readings:
+    - r7
+    - r8
+    - r9
+
+Member(m1):
+  firstname: homer
+  lastname: simpson
+  email: homer@simpson.com
+  password: secret
+  stations:
+  - s1
+  - s2
+
+Member(m2):
+  firstname: marge
+  lastname: simpson
+  email: marge@simpson.com
+  password: secret
+  stations:
+  - s3

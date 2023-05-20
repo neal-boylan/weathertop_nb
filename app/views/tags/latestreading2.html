@@ -1,0 +1,100 @@
+<div class="columns">
+    <div class="column is-one-fifth">
+        <div class="card">
+            <div class="card-content has-text-white has-background-black">
+                <b>${_station.name}</b>
+                <span class="icon is-pulled-right">
+                    <i class="fa-sharp fa-solid fa-location-dot fa-lg"></i>
+                </span> <br>
+                Lat: ${_station.latitude} <br>
+                Lng: ${_station.longitude} <br>
+            </div>
+        </div>
+    </div>
+    <div class="column is-one-fifth">
+        <div class="card">
+            <div class="card-content has-text-white has-background-black">
+                <b>Weather</b>
+                <span class="icon is-pulled-right">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                </span><br>
+                ${_station.getLatestWeather()}
+            </div>
+        </div>
+    </div>
+    <div class="column is-one-fifth">
+        <div class="card">
+            <div class="card-content has-text-white has-background-black">
+                <b>Temperature</b>
+                <span class="icon is-pulled-right">
+                    <i class="fa-solid fa-temperature-half fa-lg"></i>
+                </span><br>
+                ${_station.getLatestTempC()}°C
+                #{if _station.tempTrend()<0}
+                    <span class="icon is-pulled-right">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </span>
+                #{/if}
+                #{if _station.tempTrend()>0}
+                    <span class="icon is-pulled-right">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </span>
+                #{/if}
+                <br>
+                ${_station.getLatestTempF()}°F<br>
+                Max: ${_station.maxTemperature()}°C<br>
+                Min: ${_station.minTemperature()}°C<br>
+            </div>
+        </div>
+    </div>
+    <div class="column is-one-fifth">
+        <div class="card">
+            <div class="card-content has-text-white has-background-black">
+                <b>Wind</b>
+                <span class="icon is-pulled-right">
+                    <i class="fa-sharp fa-solid fa-wind fa-lg"></i>
+                </span><br>
+                ${_station.getLatestBeaufort()} bft
+                #{if _station.windTrend()<0}
+                <span class="icon is-pulled-right">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </span>
+                #{/if}
+                #{if _station.windTrend()>0}
+                <span class="icon is-pulled-right">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </span>
+                #{/if}
+                <br>
+                ${_station.getLatestWindDirection()} <br>
+                Feels like ${_station.getWindChill()}°C <br>
+                Max: ${_station.maxWindSpeed()} km/h<br>
+                Min: ${_station.minWindSpeed()} km/h<br>
+            </div>
+        </div>
+    </div>
+    <div class="column is-one-fifth">
+        <div class="card">
+            <div class="card-content has-text-white has-background-black">
+                <b>Pressure</b>
+                <span class="icon is-pulled-right">
+                    <i class="fa-solid fa-gauge fa-lg"></i>
+                </span><br>
+                ${_station.getLatestPressure()} hpa
+                #{if _station.pressureTrend()<0}
+                <span class="icon is-pulled-right">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </span>
+                #{/if}
+                #{if _station.pressureTrend()>0}
+                <span class="icon is-pulled-right">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </span>
+                #{/if}
+                <br>
+                Max: ${_station.maxPressure()} hpa<br>
+                Min: ${_station.minPressure()} hpa<br>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<table class="table">
+    <tbody>
+    <tr>
+        <td>
+            <div class="card">
+                <div class="card-content">
+                    <p class="card-header-title">
+                        ${_station.name}
+                        <span class="icon">
+                            <i class="fa-sharp fa-solid fa-location-dot fa-lg"></i>
+                        </span>
+                    </p>
+                    Lat: ${_station.latitude} <br>
+                    Lng: ${_station.longitude} <br>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card">
+                <div class="card-content">
+                    <p class="card-header-title">
+                        Weather
+                        <span class="icon">
+                            <i class="fa-solid fa-cloud-sun"></i>
+                        </span><br>
+                    </p>
+                    ${_station.getLatestWeather()}
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card">
+                <div class="card-content">
+                    <b>Temperature</b>
+                    <span class="icon">
+                        <i class="fa-solid fa-temperature-half fa-lg"></i>
+                    </span><br>
+                    ${_station.getLatestTempC()}°C<br>
+                    ${_station.getLatestTempF()}°F<br>
+                    Max: ${_station.maxTemperature()}°C<br>
+                    Min: ${_station.minTemperature()}°C<br>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card">
+                <div class="card-content">
+                    <b>Wind</b>
+                    <span class="icon">
+                        <i class="fa-sharp fa-solid fa-wind fa-lg"></i>
+                    </span><br>
+                    ${_station.getLatestBeaufort()} bft <br>
+                    ${_station.getLatestWindDirection()} <br>
+                    Feels like ${_station.getWindChill()}°C <br>
+                    Max: ${_station.maxWindSpeed()} km/h<br>
+                    Min: ${_station.minWindSpeed()} km/h<br>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="card">
+                <div class="card-content">
+                    <b>Pressure</b>
+                    <span class="icon">
+                        <i class="fa-solid fa-gauge fa-lg"></i>
+                    </span><br>
+                    ${_station.getLatestPressure()} hpa <br>
+                    Max: ${_station.maxPressure()} hpa<br>
+                    Min: ${_station.minPressure()} hpa<br>
+                </div>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
