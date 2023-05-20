@@ -3,40 +3,40 @@
 
 #{menu id:"admin"/}
 <div class="content box">
-    <h1 class="title">
-        All Known Songs in the Database:
-    </h1>
+  <h1 class="title">
+    All Known Songs in the Database:
+  </h1>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th>ID </th>
-            <th>Code</th>
-            <th>Temperature</th>
-            <th>Wind Speed</th>
-            <th>Pressure</th>
-        </tr>
-        </thead>
-        <tbody>
-            #{list items:readings, as:'reading'}
-            <tr>
-                <td>
-                    ${reading.id}
-                </td>
-                <td>
-                    ${reading.code}
-                </td>
-                <td>
-                    ${reading.temp}
-                </td>
-                <td>
-                    ${reading.windSpeed}
-                </td>
-                <td>
-                    ${reading.pressure}
-                </td>
-            </tr>
-            #{/list}
-        </tbody>
-    </table>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Temperature</th>
+      <th>Wind Speed</th>
+      <th>Pressure</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:readings, as:'reading'}
+    <tr>
+      <td>
+        ${reading.id}
+      </td>
+      <td>
+        ${reading.code}
+      </td>
+      <td>
+        ${reading.temp}
+      </td>
+      <td>
+        ${reading.windSpeed}
+      </td>
+      <td>
+        ${reading.pressure}
+      </td>
+    </tr>
+    #{/list}
+    </tbody>
+  </table>
 </div>
